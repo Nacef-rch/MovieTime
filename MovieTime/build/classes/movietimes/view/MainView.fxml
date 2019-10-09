@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="BPane" prefHeight="930.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movietimes.view.MainViewController">
+   <top>
+      <VBox prefHeight="84.0" prefWidth="1530.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #16171a;">
+               <children>
+                  <Label styleClass="MovieTime" stylesheets="@stlye.css" text="Movie Time" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="68.0" prefWidth="1530.0" style="-fx-background-color: #16171a;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <effect>
+                  <InnerShadow height="8.15" radius="2.2775" width="2.96" />
+               </effect>
+               <children>
+                  <HBox prefHeight="46.0" prefWidth="767.0">
+                     <children>
+                        <Label prefHeight="79.0" prefWidth="20.0" />
+                        <ImageView fx:id="Logo" fitHeight="46.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icons/MainView/logo1.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="56.0" prefWidth="38.0" />
+                        <JFXButton fx:id="Films" buttonType="RAISED" prefHeight="58.0" prefWidth="91.0" styleClass="MenuBar" stylesheets="@stlye.css" text="Films" textFill="#ffffffcc">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="Series" prefHeight="58.0" prefWidth="91.0" styleClass="MenuBar" stylesheets="@stlye.css" text="Series" textFill="#ffffffcc">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label prefHeight="57.0" prefWidth="105.0" />
+                        <Label prefHeight="56.0" prefWidth="44.0" text="Genre" textFill="#ffffffcc">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="Genre" focusColor="#ffffff00" onAction="#GenreDrag" prefHeight="58.0" prefWidth="102.0" promptText="Tous" style="-fx-text-fill: #333333;" styleClass="Genrebox" stylesheets="@stlye.css" unFocusColor="#4d4d4d00" />
+                        <Label prefHeight="57.0" prefWidth="14.0" />
+                        <Label prefHeight="56.0" prefWidth="73.0" text="Trier par" textFill="#ffffffcc">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="Trier" focusColor="#ffffff00" onAction="#tireParDrag" prefHeight="58.0" prefWidth="100.0" promptText="Tendance" style="-fx-text-fill: #333333;" styleClass="Genrebox" stylesheets="@stlye.css" unFocusColor="#4d4d4d00" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" prefHeight="46.0" prefWidth="755.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="261.0">
+                           <children>
+                              <AnchorPane opacity="0.84" prefHeight="200.0" prefWidth="200.0" style="-fx-padding: 0 0 0 0;">
+                                 <children>
+                                    <TextField fx:id="Recherchetext" alignment="CENTER" layoutX="12.0" layoutY="11.0" prefHeight="25.0" prefWidth="158.0" promptText="   Recherche" style="-fx-background-color: #040505; -fx-background-radius: 600; -fx-text-inner-color: #b095fb;">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </TextField>
+                                    <Button fx:id="recherchebutton" layoutX="-2.0" layoutY="11.0" mnemonicParsing="false" onAction="#search" prefHeight="13.0" prefWidth="0.0" style="-fx-background-color: #040505; -fx-background-radius: 600;">
+                                       <graphic>
+                                          <ImageView fitHeight="26.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/MainView/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <opaqueInsets>
+                                    <Insets top="5.0" />
+                                 </opaqueInsets>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="2.0" />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <FlowPane fx:id="FilmPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #17181b;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

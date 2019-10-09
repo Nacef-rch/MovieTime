@@ -1,0 +1,51 @@
+.MenuBar:hover {
+	-fx-border-color:#b095fb;
+	-fx-border-width:0px 0px 3px 0px;
+}
+.MenuBar:active {
+	-fx-border-color:#b095fb;
+	-fx-border-width:0px 0px 3px 0px;
+
+}
+
+
+.Genrebox {
+	-fx-prompt-text-fill: #b095fb;
+	-fx-text-fill: RED;
+	-fx-text-inner-color:#b095fb;
+	-fx-text-fill:#b095fb;
+}
+
+.jfx-combo-box .label {
+	-fx-background-color:  WHITE;
+	-fx-text-fill: RED;
+	-fx-prompt-text-fill: #b095fb;
+	-fx-text-inner-color:#b095fb;
+	-fx-text-fill:#b095fb;
+}
+.Film:hover {
+-fx-border-color: #b095fb;
+-fx-border-radius : 7px;
+-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+
+}
+.Film {
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+	-fx-background-radius: 7px;
+	-fx-focus-color: transparent; 
+
+
+}
+
+.textarea {
+
+-fx-highlight-fill: #ffffff; 
+-fx-highlight-text-fill: #ffffff;  
+-fx-text-fill: #ffffff; 
+
+}
+
+.closeb{
+-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+-fx-focus-color: transparent;
+}

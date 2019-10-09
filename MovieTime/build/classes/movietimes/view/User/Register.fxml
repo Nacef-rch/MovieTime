@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="Pane" prefHeight="623.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movietimes.view.User.RegisterController">
+   <children>
+      <ImageView fx:id="plat" fitHeight="623.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" style="-fx-font-size: 15px;">
+         <image>
+            <Image url="@icons/register.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="logo" fitHeight="160.0" fitWidth="127.0" layoutX="135.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/logo1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="userlogo" fitHeight="23.0" fitWidth="23.0" layoutX="40.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/icons/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="passlogo1" fitHeight="23.0" fitWidth="24.0" layoutX="39.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/icons/password.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="user" focusColor="#b095fb" labelFloat="true" layoutX="99.0" layoutY="281.0" prefHeight="31.0" prefWidth="250.0" promptText="User Name" style="-fx-text-inner-color: #93a4fd;" unFocusColor="#434a51">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="pass" focusColor="#b095fb" labelFloat="true" layoutX="99.0" layoutY="326.0" prefHeight="25.0" prefWidth="250.0" promptText="Password" style="-fx-text-inner-color: #93a4fd;" unFocusColor="#434a51">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="pass2" focusColor="#b095fb" labelFloat="true" layoutX="99.0" layoutY="371.0" prefHeight="25.0" prefWidth="250.0" promptText="Confirm Password" style="-fx-text-inner-color: #93a4fd;" unFocusColor="#434a51">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <ImageView fx:id="passlogo2" fitHeight="23.0" fitWidth="24.0" layoutX="40.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/icons/password2.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="Email" focusColor="#b095fb" labelFloat="true" layoutX="99.0" layoutY="416.0" prefHeight="31.0" prefWidth="250.0" promptText="Email" style="-fx-text-inner-color: #93a4fd;" unFocusColor="#434a51">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fx:id="Emaillogo" fitHeight="23.0" fitWidth="23.0" layoutX="41.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/icons/Email.png" />
+         </image>
+      </ImageView>
+      <JFXDatePicker fx:id="Dateselector" layoutX="135.0" layoutY="455.0" prefHeight="44.0" prefWidth="115.0" promptText="Date of Birth" style="-fx-text-inner-color: #93a4fd; -fx-font-size: 14px;">
+         <defaultColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#3fa6e8" />
+                  <Stop color="#cbb1fa" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </defaultColor>
+      </JFXDatePicker>
+      <JFXButton fx:id="exit" layoutX="292.0" layoutY="591.0" onAction="#closedapp" prefHeight="31.0" prefWidth="32.0" text=" ">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#2d7d9a" />
+                  <Stop color="#ffffff00" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </JFXButton>
+      <JFXButton fx:id="Signup" buttonType="RAISED" layoutX="130.0" layoutY="521.0" onAction="#Sign" prefHeight="31.0" prefWidth="91.0" text="Sign Up" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#2d7d9a" />
+                  <Stop color="#ffffff00" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#3fa6e8" />
+                  <Stop color="#cbb1fa" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </JFXButton>
+   </children>
+</AnchorPane>

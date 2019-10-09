@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="623.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movietimes.view.User.LoginController">
+   <children>
+      <ImageView fitHeight="623.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/login.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="UserName" focusColor="#b095fb" layoutX="91.0" layoutY="281.0" prefHeight="31.0" prefWidth="254.0" style="-fx-text-inner-color: #93a4fd;" unFocusColor="#434a51">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="UserPass" focusColor="#b095fb" layoutX="96.0" layoutY="326.0" prefHeight="31.0" prefWidth="245.0" style="-fx-text-inner-color: #93a4fd;" unFocusColor="#434a51">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="login" layoutX="96.0" layoutY="394.0" onAction="#makelogin" prefHeight="25.0" prefWidth="52.0" text=" ">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#2a343b" />
+                  <Stop color="#2a343b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </JFXButton>
+      <JFXButton fx:id="passwordr" layoutX="87.0" layoutY="426.0" onAction="#passwordreset" prefHeight="25.0" prefWidth="123.0" text=" ">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#2a343b" />
+                  <Stop color="#2a343b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </JFXButton>
+      <JFXButton fx:id="exit" layoutX="292.0" layoutY="592.0" onAction="#closedapp" prefHeight="31.0" prefWidth="35.0" text=" ">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#2d7d9a" />
+                  <Stop color="#2a343b00" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </JFXButton>
+      <JFXButton fx:id="Sign" layoutX="96.0" layoutY="451.0" onAction="#SignUp" prefHeight="25.0" prefWidth="130.0" text=" ">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#2a343b" />
+                  <Stop color="#2a343b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </JFXButton>
+   </children>
+</AnchorPane>

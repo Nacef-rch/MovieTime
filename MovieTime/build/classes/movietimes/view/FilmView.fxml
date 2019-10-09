@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movietimes.view.FilmViewController">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="bgM" fitHeight="900.0" fitWidth="1530.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icons/MainView/backg.jpg" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="969.0" prefWidth="1530.0">
+               <children>
+                  <VBox prefHeight="750.0" prefWidth="525.0">
+                     <children>
+                        <ImageView fx:id="posterbag" fitHeight="600.0" fitWidth="420.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icons/MainView/Posters/avengers.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="100.0" top="60.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/MainView/Ticket.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <JFXButton fx:id="TicketClick" layoutX="1.0" onAction="#changeScreenButtonTicket" prefHeight="104.0" prefWidth="203.0" text="  ">
+                                 <ripplerFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop color="#af93fa6b" />
+                                          <Stop color="#af93fa00" offset="1.0" />
+                                       </stops>
+                                    </RadialGradient>
+                                 </ripplerFill>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="200.0" top="50.0" />
+                           </VBox.margin>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="750.0" prefWidth="1102.0">
+                     <children>
+                        <HBox prefHeight="22.0" prefWidth="980.0">
+                           <children>
+                              <HBox prefHeight="31.0" prefWidth="745.0">
+                                 <children>
+                                    <Label fx:id="Title" graphicTextGap="0.0" prefHeight="31.0" prefWidth="599.0" text="Avengers : End Game" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri Bold" size="27.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="19.0" fitWidth="138.0" layoutX="179.0" layoutY="4.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/MainView/close.png" />
+                                             </image>
+                                          </ImageView>
+                                          <JFXButton fx:id="close" layoutX="174.0" layoutY="4.0" onAction="#changeScreenButtonFilm" prefHeight="25.0" prefWidth="25.0" text=" " />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="30.0" top="55.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="46.0" prefWidth="1010.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.control.Label?&gt;&lt;?import javafx.scene.text.Font?&gt;&lt;Label text=&quot;2018&quot; xmlns=&quot;http://javafx.com/javafx/8.0.171&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;font&gt;      &lt;Font size=&quot;10.0&quot; /&gt;   &lt;/font&gt;&lt;/Label&gt;;">
+                           <children>
+                              <FlowPane prefHeight="46.0" prefWidth="787.0">
+                                 <children>
+                                    <Label fx:id="Year" text="2018" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="•" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <FlowPane.margin>
+                                          <Insets left="15.0" />
+                                       </FlowPane.margin>
+                                    </Label>
+                                    <Label fx:id="Time" text="149 min" textFill="WHITE">
+                                       <FlowPane.margin>
+                                          <Insets left="15.0" />
+                                       </FlowPane.margin>
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="•" textFill="WHITE">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <FlowPane.margin>
+                                          <Insets left="15.0" />
+                                       </FlowPane.margin>
+                                    </Label>
+                                    <Label fx:id="Genre" text="action /  adventure / superhero / fantasy " textFill="WHITE">
+                                       <FlowPane.margin>
+                                          <Insets left="15.0" />
+                                       </FlowPane.margin>
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="•" textFill="WHITE">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <FlowPane.margin>
+                                          <Insets left="15.0" />
+                                       </FlowPane.margin>
+                                    </Label>
+                                    <ImageView fitHeight="25.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                       <FlowPane.margin>
+                                          <Insets left="15.0" />
+                                       </FlowPane.margin>
+                                       <image>
+                                          <Image url="@Icons/MainView/imdb.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="•" textFill="WHITE">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <FlowPane.margin>
+                                          <Insets left="15.0" />
+                                       </FlowPane.margin>
+                                    </Label>
+                                    <ImageView fx:id="Notee" fitHeight="11.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                                       <FlowPane.margin>
+                                          <Insets left="15.0" />
+                                       </FlowPane.margin>
+                                       <image>
+                                          <Image url="@Icons/MainView/45stars.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </FlowPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="30.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <JFXTextArea fx:id="Description" focusColor="#ffffff00" prefHeight="115.0" prefWidth="930.0" stylesheets="@stlye.css" text="As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain." unFocusColor="#ffffff00">
+                           <font>
+                              <Font name="Calibri Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="30.0" right="50.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="texta" />
+                              <String fx:value="textarea" />
+                           </styleClass>
+                        </JFXTextArea>
+                        <WebView fx:id="Trailer" prefHeight="394.0" prefWidth="810.0">
+                           <VBox.margin>
+                              <Insets left="100.0" right="100.0" top="30.0" />
+                           </VBox.margin>
+                        </WebView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

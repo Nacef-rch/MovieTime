@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="1000.0" style="-fx-background-color: #17181b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movietimes.view.User.BookingController">
+   <children>
+      <ImageView fitHeight="575.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="25.0">
+         <image>
+            <Image url="@icons/bgBooking.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="39.0" opacity="0.5" prefHeight="564.0" prefWidth="303.0" style="-fx-background-color: #17181b;" />
+      <VBox prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="1000.0">
+               <children>
+                  <Label styleClass="MovieTime" stylesheets="@../stlye.css" text="Movie Time" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </HBox>
+            <HBox prefHeight="600.0" prefWidth="1000.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="390.0">
+                     <children>
+                        <ImageView fitHeight="74.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/logo1.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label text="Cinema" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="Cinema" prefHeight="32.0" prefWidth="215.0">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label text="Date" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ComboBox fx:id="Date" prefHeight="32.0" prefWidth="215.0">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label text="Time" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ComboBox fx:id="Time" prefHeight="32.0" prefWidth="215.0">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <JFXButton fx:id="Bookseat" buttonType="RAISED" onAction="#BookSeat" prefHeight="37.0" prefWidth="101.0" ripplerFill="WHITE" style="-fx-background-color: #c289f8;" text="Book Seat" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Calibri Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="431.0" layoutY="108.0" opacity="0.5" prefHeight="491.0" prefWidth="484.0" style="-fx-background-color: #17181b;" />
+      <VBox layoutX="444.0" layoutY="125.0" prefHeight="491.0" prefWidth="464.0">
+         <children>
+            <HBox prefHeight="86.0" prefWidth="464.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="79.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/Chairs/Mauv.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label text="Available" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Calibri Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="40.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/Chairs/whie.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label text="Booked" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Calibri Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/Chairs/blue.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label text="Selected" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Calibri Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="388.0" prefWidth="473.0">
+               <children>
+                  <VBox prefHeight="388.0" prefWidth="125.0">
+                     <children>
+                        <FlowPane fx:id="LeftTh" prefHeight="456.0" prefWidth="123.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></FlowPane>
+                     </children></VBox>
+                  <VBox alignment="CENTER" prefHeight="388.0" prefWidth="220.0">
+                     <children>
+                        <FlowPane fx:id="flowmid" prefHeight="401.0" prefWidth="218.0">
+                           <VBox.margin>
+                              <Insets left="27.0" right="10.0" />
+                           </VBox.margin></FlowPane>
+                        <ImageView fitHeight="54.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/video.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="50.0" />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></VBox>
+                  <VBox prefHeight="388.0" prefWidth="125.0">
+                     <children>
+                        <FlowPane fx:id="flowright" prefHeight="430.0" prefWidth="123.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></FlowPane>
+                     </children></VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
